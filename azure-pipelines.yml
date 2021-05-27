@@ -17,8 +17,8 @@ variables:
   # Environment name
   environmentName: 'preddySiteName'
 
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+pool:
+  name: prreddy
 
 stages:
 - stage: Build
