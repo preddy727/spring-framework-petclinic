@@ -17,9 +17,6 @@ variables:
   # Environment name
   environmentName: 'preddySiteName'
 
-pool:
-  name: prreddy
-
 stages:
 - stage: Build
   displayName: Build stage
@@ -27,7 +24,7 @@ stages:
   - job: MavenPackageAndPublishArtifacts
     displayName: Maven Package and Publish Artifacts
     pool:
-      vmImage: $(vmImageName)
+      name: prreddy
 
     steps:
     - task: Maven@3
