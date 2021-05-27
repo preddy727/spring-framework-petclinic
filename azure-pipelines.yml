@@ -27,6 +27,9 @@ stages:
       name: prreddy
 
     steps:
+    - script: |
+        sudo apt install maven
+      displayName: 'Command Line Script'
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
